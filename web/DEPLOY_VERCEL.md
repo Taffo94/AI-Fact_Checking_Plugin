@@ -6,6 +6,7 @@ Per far girare il backend `web` su Vercel, segui questi passaggi:
 1. Accedi a [Vercel](https://vercel.com/) e clicca su **"Add New"** -> **"Project"**.
 2. Collega il tuo account GitHub e seleziona la repo `AI-Fact_Checking_Plugin`.
 
+
 ### 2. Configurazione Automatica (`vercel.json`)
 Ho aggiunto un file `vercel.json` nella root del progetto. Grazie a questo, Vercel dovrebbe capire automaticamente che:
 - Deve entrare nella cartella `web`.
