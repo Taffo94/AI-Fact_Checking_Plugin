@@ -10,8 +10,9 @@
     "storage"
   ],
   "host_permissions": [
-    "https://www.youtube.com/*",
-    "http://localhost:3000/*"
+    "https://*.youtube.com/*",
+    "http://localhost:3000/*",
+    "https://ai-fact-checking-plugin.vercel.app/*"
   ],
   "action": {
     "default_title": "Open CheckMate AI"
