@@ -6,16 +6,16 @@ Per far girare il backend `web` su Vercel, segui questi passaggi:
 1. Accedi a [Vercel](https://vercel.com/) e clicca su **"Add New"** -> **"Project"**.
 2. Collega il tuo account GitHub e seleziona la repo `AI-Fact_Checking_Plugin`.
 
-### 2. Configurazione Automatica (`vercel.json`)
-Ho aggiunto un file `vercel.json` nella root del progetto. Grazie a questo, Vercel dovrebbe capire automaticamente che:
-- Deve entrare nella cartella `web`.
-- Deve eseguire i comandi lì dentro.
+### 2. Configurazione Directory (Dashboard Vercel)
+**MOLTO IMPORTANTE**: Dato che il backend è in una sottocartella, non usare `vercel.json`. Segui questi passi nella dashboard di Vercel:
 
-Se per qualche motivo non dovesse farlo, nella schermata di configurazione di Vercel:
-- **Root Directory**: Imposta manualmente `web`.
+1. Vai in **Settings** -> **General**.
+2. Cerca la voce **Root Directory**.
+3. Clicca su **Edit** e scrivi `web`.
+4. Clicca su **Save**.
 
 ### 3. Variabili d'Ambiente (Dashboard Vercel)
-Vanno inserite nella Dashboard di Vercel (sotto "Settings" -> "Environment Variables"). Anche se il codice è in `web/`, Vercel le renderà disponibili a tutto il processo di esecuzione.
+Sempre nella Dashboard di Vercel, vai in **Settings** -> **Environment Variables** e aggiungi:
 - **Key**: `GOOGLE_AI_KEY`
 - **Value**: `[Tua Chiave API]`
 
