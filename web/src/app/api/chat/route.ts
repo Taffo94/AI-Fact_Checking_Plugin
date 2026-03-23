@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     ],
   });
 
-  const response = result.toResponse();
+  const response = result.toTextStreamResponse();
   response.headers.set('Access-Control-Allow-Origin', '*');
   return response;
 }

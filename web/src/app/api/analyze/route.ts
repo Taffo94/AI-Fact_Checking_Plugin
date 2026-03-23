@@ -39,7 +39,7 @@ export async function POST(req: NextRequest) {
 
     // 1. Get Transcript
     const transcriptItems = await YoutubeTranscript.fetchTranscript(videoId);
-    const fullTranscript = transcriptItems.map(item => `[${Math.floor(item.offset / 1000)}s] ${item.text}`).join(' ');
+    const fullTranscript = transcriptItems.map((item: { offset: number; text: string }) => `[${Math.floor(item.offset / 1000)}s] ${item.text}`).join(' ');
     console.log(`Transcript fetched. Length: ${fullTranscript.length} chars`);
 
     // 2. Analyze with Gemini 2.0 Flash
