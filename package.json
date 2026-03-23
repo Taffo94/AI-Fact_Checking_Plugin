@@ -1,0 +1,8 @@
+{
+  "name": "ai-fact-checking-monorepo",
+  "private": true,
+  "workspaces": [
+    "web",
+    "extension"
+  ]
+}
